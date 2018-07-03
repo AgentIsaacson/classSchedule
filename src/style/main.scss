@@ -1,3 +1,5 @@
+@import "./variables";
+
 .home {
     display: grid;
     height: 100vh;
@@ -8,10 +10,19 @@
 
 .library {
     grid-column: library-s/library-e;
-    background: cornflowerblue;
 }
 
 .schedule {
     grid-column: schedule-s/schedule-e;
-    background: crimson;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.gradient {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background: linear-gradient(120deg, $purple 0%, $light-blue 100%);
+    z-index: -10;
 }
