@@ -1,8 +1,14 @@
 .library-course {
-	grid-template-rows: 1fr 1fr;
+	display: grid;
 	grid-template-columns: repeat(auto-fit, 1fr);
+	grid-template-rows: 1fr 1fr;
 
-	&__title {
+	&__title-arrow {
+		grid-row: 1/2;
+		display: flex;
+	}
+
+	&__arrow {
 		grid-row: 1/2;
 	}
 
