@@ -2,6 +2,16 @@
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: [library-s] 1fr 1fr [library-e schedule-s] 1fr [schedule-e];
     grid-template-rows: 1fr;
+}
+
+.library {
+    grid-column: library-s/library-e;
+    background: cornflowerblue;
+}
+
+.schedule {
+    grid-column: schedule-s/schedule-e;
+    background: crimson;
 }
