@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import Gradient from "../gradient";
-import ScheduleCourse from "./schedule-course";
+import ScheduleCourse from "./scheduleCourse";
 import ProgressTracker from "./progressTracker";
 
 class Schedule extends Component {
