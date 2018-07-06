@@ -18,5 +18,6 @@ class ScheduleCourse extends Component {
 }
 
 export default connect(
-	null, actions
+	null,
+	actions
 )(ScheduleCourse);
