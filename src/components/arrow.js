@@ -1,11 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Arrow extends Component {
-     render() {
-        return (
-            <div className={`${this.props.className} arrow`}>
+	constructor(props) {
+		super(props);
 
-            </div>
-        );
-    }
+		this.state = {
+			status: false
+		};
+	}
+
+	flip = function() {
+        this.state.status = !this.state.status;
+		if (this.state.status) {
+			document.getElementById("arrow").classList.add("arrow-closed");
+		} else {
+			document.getElementById("arrow").classList.remove("arrow-closed");
+		}
+	}.bind(this);
+
+	render() {
+		return <a id="arrow" onClick={() => this.flip()} className={`${this.props.className} arrow`} />;
+	}
 }
