@@ -34,6 +34,7 @@ class LibraryCourse extends Component {
 				.getElementById("library-course")
 				.classList.remove("library-course-selected");
 		}
+
 		this.setState({ status });
 	}.bind(this);
 
@@ -46,11 +47,13 @@ class LibraryCourse extends Component {
 				</div>
 				<div className="library-course__line" />
 				<Arrow
+					status={this.state.status}
 					callback={(status) => this.handleCallback(status)}
 					id={this.props.id}
 					className="library-course__arrow"
 				/>
 				<Action
+					id={this.props.id}
 					onClick={() => this.props.toggleEnrolled(this.props.id)}
 					className="library-course__action"
 				/>
