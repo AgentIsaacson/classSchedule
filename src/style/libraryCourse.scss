@@ -8,11 +8,13 @@
 }
 
 .library-course {
-	padding: 15px 20px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 1fr);
-	grid-template-rows: 80px 1fr;
+	grid-template-columns: 1fr 45px 58px;
+	grid-template-rows: 32px [line-s] 20px [line-e] 1fr;
 	z-index: 10;
+	align-items: center;
+	padding: 12px 0;
+    padding-left: 25px;
 
 	&__title-check {
 		grid-row: 1/2;
@@ -20,13 +22,12 @@
 		display: flex;
 	}
 
-	&__line{
+	&__line {
 		grid-column: 1/-1;
-		grid-row: 1/2;
-		margin-top: 19px;
-		margin-bottom: 24px;
+        grid-row: line-s/line-e;
+        padding-top: 19px;
 	}
-	
+
 	&__arrow {
 		grid-row: 1/2;
 		grid-column: 2/3;
@@ -35,11 +36,7 @@
 	&__action {
 		grid-row: 1/2;
 		grid-column: 3/4;
-	}
-
-	&__description {
-		grid-row: 2/3;
-		grid-column: 1/-1;
+		justify-self: center;
 	}
 
 	&:hover {
@@ -56,10 +53,16 @@
 	}
 
 	&__icon {
-		color: $color-blue;
+        color: $color-blue;
+        padding-left: 16px;
+        font-size: 24px;
 	}
 
 	&__description {
+		padding-top: 24px;
+        grid-row: 3/4;
+		grid-column: 1/-1;
+		
 		label {
 			color: $color-blue;
 			font-family: $font-alegreya;
